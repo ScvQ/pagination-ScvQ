@@ -37,10 +37,10 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("result", result);
         // request.getRequestDispatcher("/index.jsp").forward(request,
         // response);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
         // request.getRequestDispatcher("OtherServlet").forward(request,
         // response);
-        request.getRequestDispatcher("OtherServlet").forward(request, response);
+        response.sendRedirect("/index.jsp");
+        response.sendRedirect("OtherServlet");
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
